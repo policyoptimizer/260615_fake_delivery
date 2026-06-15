@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>배달 참기 시뮬레이터 - 지갑과 건강을 지키는 습관</title>
+  
+  <!-- SEO 메타 태그 -->
+  <meta name="description" content="배달 주문 욕구가 밀려올 때, 돈과 칼로리를 가상으로 절약하고 성취감을 저축해 보세요.">
+  <meta name="keywords" content="배달참기, 돈절약, 건강, 다이어트, 식단조절, 지출통제">
+  <meta name="author" content="참음의 미학 팀">
+  <meta property="og:title" content="배달 참기 시뮬레이터">
+  <meta property="og:description" content="배달 충동을 지혜롭게 이겨내고 누적 절약 금액을 확인해 보세요!">
+  <meta property="og:type" content="website">
+
+  <!-- 스타일시트 로드 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 데스크톱용 미려한 외곽 랩퍼 및 스마트폰 목업 스탠드 -->
+  <div id="app" class="app-container">
+    
+    <!-- 앱 상단 헤더 -->
+    <header class="app-header" id="app-header">
+      <div class="logo-area" id="header-logo" onclick="navigate('home')">
+        <span class="logo-emoji">🧘</span>
+        <h1 class="logo-text">참음의 미학</h1>
+      </div>
+      <div class="header-cart-badge-container" id="header-cart-badge" onclick="navigate('cart')">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-count" class="cart-badge-count">0</span>
+      </div>
+    </header>
+
+    <!-- 동적 렌더링 콘텐츠 영역 -->
+    <main class="app-content" id="app-content">
+      <!-- script.js에 의해 동적으로 화면이 채워집니다. -->
+    </main>
+
+    <!-- 하단 네비게이션 바 -->
+    <nav class="app-nav" id="app-nav">
+      <button class="nav-item" id="nav-home" onclick="navigate('home')">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">홈</span>
+      </button>
+      <button class="nav-item" id="nav-list" onclick="navigate('restaurants')">
+        <span class="nav-icon">🍔</span>
+        <span class="nav-label">둘러보기</span>
+      </button>
+      <button class="nav-item" id="nav-cart" onclick="navigate('cart')">
+        <span class="nav-icon">🛒</span>
+        <span class="nav-label">장바구니</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- 긴급 행동 처방 모달 -->
+  <div id="emergency-modal" class="modal-overlay hidden">
+    <div class="modal-card" id="modal-card-content">
+      <div class="modal-header">
+        <span class="modal-title-emoji">🚨</span>
+        <h3>배달 참기 긴급 처방</h3>
+      </div>
+      <div class="modal-body">
+        <p id="emergency-message" class="emergency-message-text">처방 문구가 여기에 표시됩니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="btn-close-modal" onclick="closeEmergencyModal()">
+          후~ 심호흡하며 참아볼게요
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 비즈니스 로직 스크립트 -->
+  <script src="script.js"></script>
+</body>
+</html>
